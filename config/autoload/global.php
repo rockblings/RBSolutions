@@ -2,12 +2,10 @@
 return array(
    'db'=> array(
     'driver' => 'PdoMysql',
-    'dsn'    => 'mysql:dbname=rbsolutions.my.phpcloud.com;hostname=rbsolutions-db.my.phpcloud.com',
+    'dsn'    => 'mysql:dbname=rbsolutions;hostname=rbsolutions-db.my.phpcloud.com',
     'username'       => 'rbsolutions',
     'password'       => '888_ChelseaBlues247!',
-    'driver_options' => array(
-                1002 => 'SET NAMES \'UTF8\''                
-            ), 
+    'port'=>3306 
     
 ), 
     'service_manager' => array(
