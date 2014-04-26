@@ -1,17 +1,18 @@
 <?php
 return array(
-   'db' => array(
-        'driver'    => 'PDO_MYSQL',
-        'Database host'  => 'rbsolutions-db.my.phpcloud.com',
-        'Database port'  => '3306',
-        'Database schema name'  => 'rbsolutions',
-        'Database user'  => 'rbsolutions',
-        'Database password'  => '888_ChelseaBlues247!'
-    ),
+   'db'=> array(
+    'driver' => 'PdoMysql',
+    'dsn'    => 'mysql:dbname=rbsolutions.my.phpcloud.com;hostname=rbsolutions-db.my.phpcloud.com',
+    'username'       => 'rbsolutions',
+    'password'       => '888_ChelseaBlues247!',
+    'driver_options' => array(
+                1002 => 'SET NAMES \'UTF8\''                
+            ), 
+    
+), 
     'service_manager' => array(
         'factories' => array(
             'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
         ),
     ),
 );
-
