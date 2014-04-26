@@ -2,7 +2,7 @@
 return array(
    'db'=> array(
     'driver' => 'mysqli',
-    'dsn'    => 'mysql:dbname=rbsolutions;hostname=rbsolutions-db.my.phpcloud.com',
+    'dsn'    => 'mysqli:dbname=rbsolutions;hostname=rbsolutions-db.my.phpcloud.com',
     'username'       => 'rbsolutions',
     'password'       => '888_ChelseaBlues247!',
     'driver_options' => array(
