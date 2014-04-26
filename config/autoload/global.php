@@ -2,9 +2,9 @@
 return array(
    'db'=> array(
     'driver' => 'pdo',
-    'dsn'    => 'mysql:dbname=jmb;host=jmodb.c1doea96ilou.eu-west-1.rds.amazonaws.com',
-    'username'       => 'jmb',
-    'password'       => 'QyKN9jAw7xb2prZ5',
+    'dsn'    => 'mysql:dbname=rbsolutions;host=rbsolutions-db.my.phpcloud.com',
+    'username'       => 'rbsolutions',
+    'password'       => '888_ChelseaBlues247!',
     'driver_options' => array(
       1002 => 'SET NAMES \'UTF8\''
     ), 
