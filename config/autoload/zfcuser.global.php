@@ -154,7 +154,7 @@ $settings = array(
      *                  If callback used, it will receive the identity as the param
      *
      */
-    //'login_redirect_route' => 'zfcuser',
+    'login_redirect_route' => 'zfcuser',
 
     /**
      * Logout Redirect Route
@@ -187,7 +187,7 @@ $settings = array(
      *
      * Accepted values: integer between 4 and 31
      */
-    //'password_cost' => 14,
+    'password_cost' => 4,
 
     /**
      * Enable user state usage
