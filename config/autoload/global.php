@@ -1,16 +1,18 @@
 <?php
-/**
- * Global Configuration Override
- *
- * You can use this file for overriding configuration values from modules, etc.
- * You would place values in here that are agnostic to the environment and not
- * sensitive to security.
- *
- * @NOTE: In practice, this file will typically be INCLUDED in your source
- * control, so do not include passwords or other sensitive information in this
- * file.
- */
-
 return array(
-    // ...
+   'db'=> array(
+    'driver' => 'pdo',
+    'dsn'    => 'mysql:dbname=rbsolutions;hostname=rbsolutions-db.my.phpcloud.com',
+    'username'       => 'rbsolutions',
+    'password'       => '888_ChelseaBlues247!',
+    'driver_options' => array(
+                1002 => 'SET NAMES \'UTF8\''                
+            ), 
+    
+), 
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
+        ),
+    ),
 );

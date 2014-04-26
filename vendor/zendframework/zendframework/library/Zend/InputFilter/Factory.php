@@ -3,7 +3,7 @@
  * Zend Framework (http://framework.zend.com/)
  *
  * @link      http://github.com/zendframework/zf2 for the canonical source repository
- * @copyright Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
@@ -14,6 +14,7 @@ use Zend\Filter\FilterChain;
 use Zend\Stdlib\ArrayUtils;
 use Zend\Validator\ValidatorInterface;
 use Zend\Validator\ValidatorChain;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
 class Factory
 {
@@ -116,7 +117,15 @@ class Factory
     public function setInputFilterManager(InputFilterPluginManager $inputFilterManager)
     {
         $this->inputFilterManager = $inputFilterManager;
-
+        $serviceLocator = $this->inputFilterManager->getServiceLocator();
+        if ($serviceLocator && $serviceLocator instanceof ServiceLocatorInterface) {
+            if ($serviceLocator->has('ValidatorManager')) {
+                $this->getDefaultValidatorChain()->setPluginManager($serviceLocator->get('ValidatorManager'));
+            }
+            if ($serviceLocator->has('FilterManager')) {
+                $this->getDefaultFilterChain()->setPluginManager($serviceLocator->get('FilterManager'));
+            }
+        }
         return $this;
     }
 
@@ -215,6 +224,9 @@ class Factory
                     break;
                 case 'fallback_value':
                     $input->setFallbackValue($value);
+                    break;
+                case 'break_on_failure':
+                    $input->setBreakOnFailure($value);
                     break;
                 case 'filters':
                     if ($value instanceof FilterChain) {

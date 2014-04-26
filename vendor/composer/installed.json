@@ -1,21 +1,69 @@
 [
     {
-        "name": "zendframework/zendframework",
-        "version": "2.2.2",
-        "version_normalized": "2.2.2.0",
+        "name": "zendframework/zendxml",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/zendframework/zf2.git",
-            "reference": "release-2.2.2"
+            "url": "https://github.com/zendframework/ZendXml.git",
+            "reference": "559b34f426d33a11c3db118e00ce14bb8dc64e5f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/zendframework/zf2/zipball/release-2.2.2",
-            "reference": "release-2.2.2",
+            "url": "https://api.github.com/repos/zendframework/ZendXml/zipball/559b34f426d33a11c3db118e00ce14bb8dc64e5f",
+            "reference": "559b34f426d33a11c3db118e00ce14bb8dc64e5f",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "fabpot/php-cs-fixer": "*@dev",
+            "phpunit/phpunit": "~3.7"
+        },
+        "time": "2014-03-05 22:25:44",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "ZendXml": "library/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "Utility library for XML usage, best practices, and security in PHP",
+        "homepage": "http://packages.zendframework.com/",
+        "keywords": [
+            "security",
+            "xml",
+            "zf2"
+        ]
+    },
+    {
+        "name": "zendframework/zendframework",
+        "version": "2.2.7",
+        "version_normalized": "2.2.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zendframework/zf2.git",
+            "reference": "ffca3e3eefd7fbe0f316ed0224edff368949223d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zendframework/zf2/zipball/ffca3e3eefd7fbe0f316ed0224edff368949223d",
+            "reference": "ffca3e3eefd7fbe0f316ed0224edff368949223d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "zendframework/zendxml": "~1.0-dev"
         },
         "replace": {
             "zendframework/zend-authentication": "self.version",
@@ -72,6 +120,7 @@
         },
         "require-dev": {
             "doctrine/annotations": ">=1.0",
+            "fabpot/php-cs-fixer": "*@dev",
             "ircmaxell/random-lib": "dev-master",
             "ircmaxell/security-lib": "dev-master",
             "ocramius/proxy-manager": "0.4.*",
@@ -85,7 +134,7 @@
             "zendframework/zendpdf": "ZendPdf for creating PDF representations of barcodes",
             "zendframework/zendservice-recaptcha": "ZendService\\ReCaptcha for rendering ReCaptchas in Zend\\Captcha and/or Zend\\Form"
         },
-        "time": "2013-07-24 14:02:19",
+        "time": "2014-04-15 14:31:59",
         "bin": [
             "bin/classmap_generator.php",
             "bin/pluginmap_generator.php",
@@ -112,6 +161,140 @@
         "homepage": "http://framework.zend.com/",
         "keywords": [
             "framework",
+            "zf2"
+        ]
+    },
+    {
+        "name": "zf-commons/zfc-base",
+        "version": "v0.1.2",
+        "version_normalized": "0.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ZF-Commons/ZfcBase.git",
+            "reference": "fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ZF-Commons/ZfcBase/zipball/fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf",
+            "reference": "fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "zendframework/zend-db": "~2.1",
+            "zendframework/zend-eventmanager": "~2.1",
+            "zendframework/zend-loader": "~2.1",
+            "zendframework/zend-modulemanager": "~2.1",
+            "zendframework/zend-mvc": "~2.1",
+            "zendframework/zend-servicemanager": "~2.1",
+            "zendframework/zend-stdlib": "~2.1"
+        },
+        "time": "2013-05-02 12:33:49",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "ZfcBase": "src/"
+            },
+            "classmap": [
+                "./Module.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Kyle Spraggs",
+                "email": "theman@spiffyjr.me",
+                "homepage": "http://www.spiffyjr.me/"
+            },
+            {
+                "name": "Evan Coury",
+                "email": "me@evancoury.com",
+                "homepage": "http://blog.evan.pro/"
+            }
+        ],
+        "description": "A set of genetic (abstract) classes which are commonly used across multiple modules.",
+        "homepage": "https://github.com/ZF-Commons/ZfcBase",
+        "keywords": [
+            "zf2"
+        ]
+    },
+    {
+        "name": "zf-commons/zfc-user",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ZF-Commons/ZfcUser.git",
+            "reference": "70eb1db55e33e50f17030674e0353247b3e115c4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ZF-Commons/ZfcUser/zipball/70eb1db55e33e50f17030674e0353247b3e115c4",
+            "reference": "70eb1db55e33e50f17030674e0353247b3e115c4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "zendframework/zend-authentication": "~2.1",
+            "zendframework/zend-crypt": "~2.1",
+            "zendframework/zend-form": "~2.1",
+            "zendframework/zend-http": "~2.1",
+            "zendframework/zend-inputfilter": "~2.1",
+            "zendframework/zend-loader": "~2.1",
+            "zendframework/zend-modulemanager": "~2.1",
+            "zendframework/zend-mvc": "~2.1",
+            "zendframework/zend-servicemanager": "~2.1",
+            "zendframework/zend-session": "~2.1",
+            "zendframework/zend-stdlib": "~2.1",
+            "zendframework/zend-validator": "~2.1",
+            "zendframework/zend-view": "~2.1",
+            "zf-commons/zfc-base": "0.*"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "1.4.*",
+            "phpunit/phpunit": ">=3.7,<4",
+            "squizlabs/php_codesniffer": "1.4.*",
+            "zendframework/zend-captcha": "~2.1"
+        },
+        "suggest": {
+            "zendframework/zend-captcha": "Zend\\Captcha if you want to use the captcha component"
+        },
+        "time": "2014-04-23 21:29:54",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.1.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "ZfcUser": "src/"
+            },
+            "classmap": [
+                "./Module.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Kyle Spraggs",
+                "email": "theman@spiffyjr.me",
+                "homepage": "http://www.spiffyjr.me/"
+            },
+            {
+                "name": "Evan Coury",
+                "email": "me@evancoury.com",
+                "homepage": "http://blog.evan.pro/"
+            }
+        ],
+        "description": "A generic user registration and authentication module for ZF2. Supports Zend\\Db and Doctrine2.",
+        "homepage": "https://github.com/ZF-Commons/ZfcUser",
+        "keywords": [
             "zf2"
         ]
     }

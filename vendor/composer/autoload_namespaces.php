@@ -6,5 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ZfcUser' => array($vendorDir . '/zf-commons/zfc-user/src'),
+    'ZfcBase' => array($vendorDir . '/zf-commons/zfc-base/src'),
     'Zend\\' => array($vendorDir . '/zendframework/zendframework/library'),
+    'ZendXml' => array($vendorDir . '/zendframework/zendxml/library'),
 );

@@ -9,13 +9,15 @@
     "homepage": "http://framework.zend.com/",
     "license": "BSD-3-Clause",
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "zendframework/zendxml": "~1.0-dev"
     },
     "require-dev": {
         "doctrine/annotations": ">=1.0",
         "ircmaxell/random-lib": "dev-master",
         "ircmaxell/security-lib": "dev-master",
         "ocramius/proxy-manager": "0.4.*",
+        "fabpot/php-cs-fixer": "*@dev",
         "phpunit/PHPUnit": "3.7.*"
     },
     "suggest": {

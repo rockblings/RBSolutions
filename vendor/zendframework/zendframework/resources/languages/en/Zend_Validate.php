@@ -3,7 +3,7 @@
  * Zend Framework (http://framework.zend.com/)
  *
  * @link      http://github.com/zendframework/zf2 for the canonical source repository
- * @copyright  Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
@@ -36,7 +36,7 @@ return array(
     // Zend\I18n\Validator\PhoneNumber
     "The input does not match a phone number format" => "The input does not match a phone number format",
     "The country provided is currently unsupported" => "The country provided is currently unsupported",
-    "Invalid type given.  String expected" => "Invalid type given.  String expected",
+    "Invalid type given. String expected" => "Invalid type given. String expected",
 
     // Zend\I18n\Validator\PostCode
     "Invalid type given. String or integer expected" => "Invalid type given. String or integer expected",
