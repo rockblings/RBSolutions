@@ -1,13 +1,16 @@
 <?php
 return array(
-   'db'=> array(
-    'driver' => 'PdoMysql',
-    'dsn'    => 'mysql:dbname=rbsolutions;hostname=rbsolutions-db.my.phpcloud.com',
-    'username'       => 'rbsolutions',
-    'password'       => '888_ChelseaBlues247!',
-    'port'=>3306 
-    
-), 
+   $dsn = sprintf(
+	'mysql:dbname=%s;host=%s',
+	get_cfg_var('zend_developer_cloud.db.name'),
+	get_cfg_var('zend_developer_cloud.db.host')
+),
+
+$db = new PDO(
+	$dsn,
+	get_cfg_var('zend_developer_cloud.db.username'),
+	get_cfg_var('zend_developer_cloud.db.password')
+),
     'service_manager' => array(
         'factories' => array(
             'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
