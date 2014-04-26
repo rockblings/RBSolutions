@@ -1,8 +1,8 @@
 <?php
 return array(
    'db'=> array(
-    'driver' => 'mysqli',
-    'dsn'    => 'mysqli:dbname=rbsolutions;hostname=rbsolutions-db.my.phpcloud.com',
+    'driver' => 'pdo',
+    'dsn'    => 'mysql:dbname=rbsolutions;hostname=rbsolutions-db.my.phpcloud.com',
     'username'       => 'rbsolutions',
     'password'       => '888_ChelseaBlues247!',
     'driver_options' => array(
