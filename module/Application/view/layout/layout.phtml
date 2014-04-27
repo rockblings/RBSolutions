@@ -21,7 +21,7 @@
 
     </head>
     <body>
-    <?php if($this->zfcUserIdentity()) {
+   
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
@@ -33,13 +33,15 @@
                     <a class="brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Rockblings Software Solutions') ?></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
+                        <?php if($this->zfcUserIdentity()) {
                             <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                        <?php } ?>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
             </div>
         </div>
-    <?php } ?>
+    
         <div class="container">
             <?php echo $this->content; ?>
             <hr>
