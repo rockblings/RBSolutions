@@ -33,5 +33,6 @@ body {
 div.container a.brand {
     background: url("../img/rb_logo.png") no-repeat scroll 0 10px transparent;
     margin-left: 0;
+    margin-right: 5;
     padding: 8px 20px 12px 40px;
 }
