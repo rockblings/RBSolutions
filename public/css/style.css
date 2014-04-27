@@ -3,9 +3,7 @@ body {
     padding-bottom: 40px;
 }
 
-.zf-green {
-    color: #68b604;
-}
+
 
 .btn-success {
   background-color: #57a900;
@@ -33,6 +31,6 @@ body {
 div.container a.brand {
     background: url("../img/rb_logo.png") no-repeat scroll 0 10px transparent;
     margin-left: 0;
-    margin-right: 5;
+    margin-right: 15;
     padding: 8px 20px 12px 40px;
 }
